@@ -2,21 +2,115 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Dates</title>
+<link rel="icon" href="third.png" type="flavicon.png">
+<title>Dates🌸</title>
 <style>
-  body { font-family: Arial, sans-serif; padding: 20px; background: #f7f7f7; }
-  h1 { color: #333; text-align: center; }
-  table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-  th, td { padding: 12px; text-align: center; border-bottom: 1px solid #ddd; }
-  th { background-color: #2a7ae2; color: #fff; }
-  tr:hover { background-color: #f1f1f1; }
-  .date { font-weight: bold; color: #2a7ae2; }
-  .notify { font-weight: bold; color: #d9534f; }
+  /* Background & Body */
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 20px;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    color: #333;
+    position: relative;
+  }
+
+  @keyframes gradientBG {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+  }
+
+  /* Floral corners */
+  body::before, body::after {
+    content: "🌸";
+    font-size: 60px;
+    position: absolute;
+    opacity: 0.2;
+  }
+  body::before { top: 10px; left: 10px; }
+  body::after { bottom: 10px; right: 10px; }
+
+  h1 {
+    text-align: center;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    margin-bottom: 30px;
+    font-size: 36px;
+  }
+
+  /* Table Styling */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    position: relative;
+  }
+
+  th, td {
+    padding: 14px 12px;
+    text-align: center;
+    border-bottom: 1px solid #f1f1f1;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+
+  th {
+    background: #ff6a88;
+    background: linear-gradient(to right, #ff6a88, #ff99ac);
+    color: #fff;
+    font-size: 16px;
+  }
+
+  tr:hover td {
+    background: rgba(255, 182, 193, 0.3);
+    transform: scale(1.02);
+  }
+
+  /* Flower behind rows */
+  tr:nth-child(odd)::before {
+    content: "🌼";
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    opacity: 0.2;
+  }
+
+  tr:nth-child(even)::before {
+    content: "🌺";
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    opacity: 0.2;
+  }
+
+  .date {
+    font-weight: bold;
+    color: #d6336c;
+  }
+
+  .notify {
+    font-weight: bold;
+    color: #ff4500;
+  }
+
+  @media (max-width: 768px) {
+    th, td { padding: 10px; font-size: 14px; }
+    h1 { font-size: 28px; }
+  }
 </style>
 </head>
 <body>
 
-<h1>Wemi Reminderz</h1>
+<h1>🌸 Wemi Reminderz 🌸</h1>
 
 <table>
   <thead>
